@@ -1,0 +1,16 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .75rem;
+  transition: .5s;
+  z-index: 5;
+
+  &-outline-secondary {
+    color: $primary_light;
+  }
+}
