@@ -16,7 +16,7 @@ try {
     let headerMenu = $('.header-nav-list');
     let burgerMenu = $('.burger-menu');
 
-    if ($(window).width() >= 992) {
+    if ($(window).width() >= 1200) {
         burgerMenu.addClass('active');
         headerMenu.addClass('active');
     }
@@ -58,7 +58,7 @@ try {
     /**
      * PagePiling
      */
-    if ($(window).width() >= 992) {
+    if ($(window).width() >= 1200) {
         $('#app').pagepiling({
             menu: '#app-header',
             anchors: [],
@@ -75,22 +75,26 @@ try {
             },
             afterLoad: function (anchorLink, index) {
                 let ppNav = $('#pp-nav');
+                let laboratoryImage = $('.laboratory-image');
 
                 if (index === 1) {
                     header.removeClass('white').addClass('dark');
-                    ppNav.removeClass('dark white').addClass('primary');
+                    ppNav.removeClass('dark white last').addClass('primary');
                 }
                 if (index === 2) {
                     header.removeClass('white').addClass('dark');
-                    ppNav.removeClass('dark white').addClass('primary');
+                    ppNav.removeClass('dark white last').addClass('primary');
+                    laboratoryImage.addClass('start-animation');
+
                 }
                 if (index === 3) {
                     header.removeClass('dark').addClass('white');
-                    ppNav.removeClass('primary white').addClass('dark');
+                    ppNav.removeClass('primary white last').addClass('dark');
                 }
                 if (index === 4) {
                     header.removeClass('white').addClass('dark');
                     ppNav.removeClass('dark primary').addClass('white');
+                    ppNav.removeClass('dark primary').addClass('white last');
                 }
             },
             afterRender: function () {
@@ -98,6 +102,24 @@ try {
         });
     }
 
+    /**
+     * Products accordion
+     */
+    document.querySelector('.products-item').classList.add('active');
+    $('.products-item').on('click', function () {
+        $('.products-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    /**
+     * Tabs
+     */
+
+    $('.custom-tabs-nav').on('click', 'div:not(.active)', function () {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.custom-tabs').find('.custom-tabs-body-item').removeClass('active').eq($(this).index()).addClass('active');
+    });
 
     /**
      * Form-label
@@ -187,9 +209,9 @@ try {
     /**
      * Sliders
      */
-    if ($('.some-slider').length) {
+    if ($('.reviews-slider').length) {
 
-        let elem1 = document.querySelector('.some-slider');
+        let elem1 = document.querySelector('.reviews-slider');
         if (elem1) {
             const flkty1 = new Flickity(elem1, {
                 prevNextButtons: false,
@@ -198,15 +220,16 @@ try {
                 draggable: false,
                 wrapAround: false,
                 cellAlign: 'left',
+                adaptiveHeight: true
             });
 
-            let prevArrowIntro = document.querySelector('.slider-arrow--intro .slider-arrow-item--prev');
+            let prevArrowIntro = document.querySelector('.slider-arrow--reviews .slider-arrow-item--prev');
 
             prevArrowIntro.addEventListener('click', function () {
                 flkty1.previous(false, false);
             });
 
-            let nextArrowIntro = document.querySelector('.slider-arrow--intro .slider-arrow-item--next');
+            let nextArrowIntro = document.querySelector('.slider-arrow--reviews .slider-arrow-item--next');
 
             nextArrowIntro.addEventListener('click', function () {
                 flkty1.next(false, false);

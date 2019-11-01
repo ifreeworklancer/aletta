@@ -10,6 +10,17 @@
   background: $primary;
   transition: .4s;
 
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -45px;
+    width: 50px;
+    height: 45px;
+    background: $primary;
+    transition: 0s;
+  }
+
   ul {
     width: 100%;
     counter-reset: section;
@@ -64,5 +75,13 @@
 
   &.white {
     background: #fff;
+  }
+
+  &.last {
+
+    &::before {
+      bottom: 0;
+      transition: .2s;
+    }
   }
 }

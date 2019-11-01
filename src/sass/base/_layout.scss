@@ -1,0 +1,31 @@
+.description {
+
+  p {
+    line-height: 170%;
+  }
+}
+
+.section-description {
+  position: relative;
+  z-index: 10;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .description {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      background: $secondary;
+    }
+  }
+}

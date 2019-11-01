@@ -11,3 +11,25 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+%mainList {
+
+    li {
+        position: relative;
+        padding-left: 30px;
+        font-size: .875rem;
+        margin-bottom: 15px;
+        color: #e0e0e0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid $primary;
+        }
+    }
+}

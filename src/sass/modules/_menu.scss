@@ -3,13 +3,14 @@
   position: fixed;
   transform: translateY(-100%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: $primary_light;
   z-index: 200;
   transition: .5s;
 
-  @media (min-width: map_get($grid-breakpoints, lg)) {
+  @media (min-width: map_get($grid-breakpoints, xl)) {
     display: none;
   }
 

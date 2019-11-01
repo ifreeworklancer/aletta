@@ -1,3 +1,202 @@
 #reviews {
   background: $primary_light;
+  padding: 50px 0 0;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 100px 0 0;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 100px 0;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 0;
+  }
+
+  #app-footer {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-left: 50px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .section-description {
+    margin-bottom: 40px;
+  }
+
+  .decor-image {
+    @extend %img;
+    position: absolute;
+    right: 20px;
+    bottom: 10%;
+    width: 170px;
+    height: 80px;
+    z-index: 2;
+  }
+
+  .reviews {
+    position: relative;
+    z-index: 5;
+    margin-top: 100px;
+    margin-bottom: 60px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .decor-title {
+      position: absolute;
+      top: -70px;
+      right: 0;
+      font-size: 2.125rem;
+      color: $primary;
+      text-transform: uppercase;
+      z-index: 2;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: 3.75rem;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        top: 15%;
+      }
+
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+      right: 5px;
+      justify-content: space-between;
+      z-index: 20;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        left: 20px;
+        right: 20px;
+      }
+    }
+
+    &-slider {
+      width: 100%;
+      z-index: 10;
+
+      &-item {
+        width: 100%;
+
+        .reviews-item {
+          position: relative;
+          margin: 0 auto;
+          width: 85%;
+          background: #fff;
+          border: 1px solid $secondary;
+          border-radius: 5px;
+
+          @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 60%;
+          }
+
+          @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 80%;
+          }
+
+          @media (min-width: map_get($grid-breakpoints, xl)) {
+            width: 70%;
+          }
+
+          .image {
+            margin: 0 auto 15px;
+            width: 113px;
+            height: 113px;
+            padding: 3px;
+            border-radius: 50%;
+            border: 2px solid #F3DDA9;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+              position: absolute;
+              left: 25px;
+              bottom: 20px;
+              margin: 0;
+            }
+
+            figure {
+              @extend %img;
+              border-radius: 50%;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &-body {
+            padding: 25px 20px;
+            min-height: 95px;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+              padding: 25px 20px 25px 160px;
+            }
+
+            .description {
+              font-size: .875rem;
+              color: $secondary;
+
+              p {
+
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          &-footer {
+            background: $secondary;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+              padding: 10px 20px 10px 160px;
+            }
+
+            .name {
+              color: #fff;
+            }
+
+            .stars {
+              display: flex;
+
+              .icon {
+                margin-right: 5px;
+
+                &:last-of-type {
+                  margin-right: 0;
+                }
+
+                svg {
+                  fill: #FFD159;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -34,7 +34,7 @@ $laboratory = [
 $products = [
     'items' => [
         [
-            'title' => 'Название крема ',
+            'title' => 'Название крема 1',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -44,12 +44,12 @@ $products = [
             'price' => '299',
             'images' => [
                 '../../images/content/products/products-item-1.png',
-                '../../images/content/products/products-item-2.png',
+                '../../images/content/products/products-item-1.png',
                 '../../images/content/products/products-item-1.png',
             ]
         ],
         [
-            'title' => 'Название крема ',
+            'title' => 'Название крема 2',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -59,12 +59,12 @@ $products = [
             'price' => '299',
             'images' => [
                 '../../images/content/products/products-item-1.png',
-                '../../images/content/products/products-item-2.png',
+                '../../images/content/products/products-item-1.png',
                 '../../images/content/products/products-item-1.png',
             ]
         ],
         [
-            'title' => 'Название крема ',
+            'title' => 'Название крема 3',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -74,7 +74,7 @@ $products = [
             'price' => '299',
             'images' => [
                 '../../images/content/products/products-item-1.png',
-                '../../images/content/products/products-item-2.png',
+                '../../images/content/products/products-item-1.png',
                 '../../images/content/products/products-item-1.png',
             ]
         ],
@@ -86,28 +86,28 @@ $reviews = [
     'description' => 'Заполните форму и наш менеджер свяжется с Вами, чтобы уладить детали оплаты и доставки',
     'slider' => [
         [
-            'image' => '../../images/content/reviews/reviews-item-1.png',
+            'image' => '../../images/content/reviews/reviews-item-1.jpg',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'name' => 'Валентина',
             'stars' => 5,
         ],
         [
-            'image' => '../../images/content/reviews/reviews-item-1.png',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'image' => '../../images/content/reviews/reviews-item-1.jpg',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua',
             'name' => 'Валентина',
-            'stars' => 5,
+            'stars' => 4,
         ],
         [
-            'image' => '../../images/content/reviews/reviews-item-1.png',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'image' => '../../images/content/reviews/reviews-item-1.jpg',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
             'name' => 'Валентина',
-            'stars' => 5,
+            'stars' => -5,
         ],
         [
-            'image' => '../../images/content/reviews/reviews-item-1.png',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'image' => '../../images/content/reviews/reviews-item-1.jpg',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
             'name' => 'Валентина',
-            'stars' => 5,
+            'stars' => 10,
         ],
     ],
 ];

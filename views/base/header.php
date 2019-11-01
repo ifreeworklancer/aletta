@@ -26,7 +26,7 @@
             </div>
             <div class="col-auto">
                 <nav class="header-nav">
-                    <ul class="header-nav-list d-none d-lg-flex">
+                    <ul class="header-nav-list d-none d-xl-flex">
                         <li>
                             <a href="/">
                                 Главная
@@ -53,7 +53,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-secondary d-none d-lg-inline-flex">
+                    <a href="#" class="btn btn-secondary d-none d-xl-inline-flex">
                         связаться, чтобы заказать
                     </a>
                     <div class="burger-menu">
@@ -92,6 +92,11 @@
                 </a>
             </li>
         </ul>
+        <div class="mt-4">
+            <a href="#" class="btn btn-secondary">
+                связаться, чтобы заказать
+            </a>
+        </div>
     </div>
 </header>
 

@@ -8,7 +8,7 @@
   padding: 10px 20px;
   background: $primary_light;
 
-  @media (min-width: map_get($grid-breakpoints, lg)) {
+  @media (min-width: map_get($grid-breakpoints, xl)) {
     padding: 0;
     background: transparent;
   }
@@ -29,7 +29,7 @@
     z-index: 210;
     height: 20px;
 
-    @media (min-width: map_get($grid-breakpoints, lg)) {
+    @media (min-width: map_get($grid-breakpoints, xl)) {
       height: 65px;
     }
 
@@ -78,6 +78,7 @@
     .btn {
       position: relative;
       margin-right: 30px;
+      color: $primary_light;
       transition: .4s;
 
       &::before {
