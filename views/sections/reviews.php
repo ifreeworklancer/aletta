@@ -15,6 +15,24 @@
                 </div>
                 <form>
                     <div class="form-column">
+                        <div class="custom-dropdown">
+                            <div class="custom-dropdown-input">
+                                <div class="custom-dropdown-input__title">
+                                    <?= $products_list['items'][0]['name']?>
+                                </div>
+                                <div class="custom-dropdown-input__icon"></div>
+                            </div>
+                            <div class="custom-dropdown-body">
+                                <ul class="custom-dropdown-body-list">
+                                    <?php foreach ($products_list['items'] as $item) : ?>
+                                        <li data-cream="<?= $item['name']; ?>">
+                                            <?= $item['name']; ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                                <input type="hidden" name="cream" value="<?= $products_list['items'][0]['name']?>">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="user-name">
                                 Имя

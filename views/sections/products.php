@@ -26,7 +26,8 @@
                                 <?php endforeach; ?>
                             </div>
                             <div class="custom-tabs-body">
-                                <?php $countTabBody = 0; foreach ($item['images'] as $image) : $countTabBody++; ?>
+                                <?php $countTabBody = 0;
+                                foreach ($item['images'] as $image) : $countTabBody++; ?>
                                     <div class="custom-tabs-body-item <?php if ($countTabBody === 1) echo 'active'; ?>">
                                         <figure style="background-image: url('<?= $image; ?>');"></figure>
                                     </div>
@@ -55,20 +56,23 @@
                                 <?php endforeach; ?>
                             </ul>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <div class="price">
+                        <div class="price">
                             <span class="price-text">
                                 цена
                             </span>
-                                <span class="price-value">
+                            <span class="price-value">
                                 <?= $item['price'] ?>
                             </span>
-                                <span class="price-currency">
+                            <span class="price-currency">
                                 грн
                             </span>
-                            </div>
-                            <a href="#" class="btn btn-outline-primary">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="btn btn-outline-primary open-feedback mr-4">
                                 заказать
+                            </a>
+                            <a href="#" class="link-more">
+                                узнать больше
                             </a>
                         </div>
                     </div>
@@ -76,5 +80,6 @@
             </div>
         <?php endforeach; ?>
     </div>
-    <figure class="decor-image d-none d-xl-block" style="background-image: url('../../images/icon/decor-image-secondary.png');"></figure>
+    <figure class="decor-image d-none d-xl-block"
+            style="background-image: url('../../images/icon/decor-image-secondary.png');"></figure>
 </section>

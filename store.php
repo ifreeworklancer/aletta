@@ -1,6 +1,24 @@
 <?php
 $app_title = 'Aletta';
 
+
+$products_list = [
+    'items' => [
+        [
+            'image' => '../../images/content/products/products-item-1.png',
+            'name' => 'Крем номер №1 цена 299 грн',
+        ],
+        [
+            'image' => '../../images/content/products/products-item-1.png',
+            'name' => 'Крем номер №2 цена 200 грн',
+        ],
+        [
+            'image' => '../../images/content/products/products-item-1.png',
+            'name' => 'Крем номер №3 цена 250 грн',
+        ],
+    ]
+];
+
 $intro = [
     'subtitle' => 'Aletta',
     'title' => 'Новая линейка брендовых кремов для лица',

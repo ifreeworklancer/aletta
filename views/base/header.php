@@ -53,7 +53,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-secondary d-none d-xl-inline-flex">
+                    <a href="#" class="btn btn-secondary d-none d-xl-inline-flex open-feedback">
                         связаться, чтобы заказать
                     </a>
                     <div class="burger-menu">
@@ -93,7 +93,7 @@
             </li>
         </ul>
         <div class="mt-4">
-            <a href="#" class="btn btn-secondary">
+            <a href="#" class="btn btn-secondary open-feedback">
                 связаться, чтобы заказать
             </a>
         </div>

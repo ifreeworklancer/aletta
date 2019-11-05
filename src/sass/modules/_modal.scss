@@ -1,34 +1,104 @@
-.custom-modal {
+.custom-modal-wrapper {
+  @extend %pos;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  padding: 30px 15px;
-  width: 95%;
-  max-width: 400px;
-  background: radial-gradient(385.50px at 1.21% 4.56%, #1B1B1B 0%, #090909 100%);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  overflow-y: auto;
+  max-height: 100%;
   z-index: 500;
   transition: .5s;
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, -300%);
+  padding: 20px 0;
+  transform: translateY(-100%);
 
-  @media (min-width: map_get($grid-breakpoints, sm)) {
-    padding: 50px 40px;
+  .custom-modal {
+    position: relative;
+    display: flex;
+    width: 95%;
+    max-width: 760px;
+    padding: 30px 25px;
+    margin: auto;
+    border-radius: 15px;
+    background: $primary_light;
+    z-index: 10;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 25%;
+      background: #EBD7A7;
+      z-index: -2;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        display: block;
+      }
+    }
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 40px 50px;
+    }
+
+    &-view {
+      width: 50%;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        display: block;
+      }
+
+      .product-selected {
+        position: relative;
+        width: 90%;
+        height: 100%;
+
+        &-item {
+          @extend %pos;
+          transform: translateX(-200%);
+          transition: .7s ease-in-out;
+          text-align: center;
+
+          .image {
+            margin-bottom: 20px;
+            max-width: 100%;
+            max-height: 280px;
+          }
+
+          &.active {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    &-body {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 50%;
+      }
+
+      .title {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &.active {
     opacity: 1;
     pointer-events: all;
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
   }
 
   .close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
 
     &:hover {
@@ -42,9 +112,9 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 20px;
+      width: 15px;
       height: 1px;
-      background: #fff;
+      background: $secondary;
       opacity: .7;
 
       &--left {
@@ -56,13 +126,6 @@
       }
     }
   }
-
-  &-header {
-
-    .title {
-      margin-bottom: 20px;
-    }
-  }
 }
 
 
@@ -72,7 +135,7 @@
   background: rgba($dark, .8);
   opacity: 0;
   pointer-events: none;
-  z-index: 499;
+  z-index: 5;
   transition: .5s;
 
   &.active {

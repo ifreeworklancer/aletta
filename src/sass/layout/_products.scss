@@ -2,7 +2,7 @@
   background: $dark;
 
   @media (min-width: map_get($grid-breakpoints, xl)) {
-    padding-top: 15%;
+    padding-top: 13%;
   }
 
   .decor-image {
@@ -189,6 +189,11 @@
           width: 100%;
           margin-bottom: 30px;
 
+          @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 80%;
+            margin: 0 auto 30px;
+          }
+
           @media (min-width: map_get($grid-breakpoints, lg)) {
             width: 50%;
             margin-bottom: 0;
@@ -244,6 +249,11 @@
 
         .products-description {
 
+          @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 60%;
+            margin: 0 auto;
+          }
+
           @media (min-width: map_get($grid-breakpoints, lg)) {
             width: 50%;
           }
@@ -254,11 +264,11 @@
 
           .description {
             color: #e0e0e0;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
           }
 
           .feature {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
 
             &-title {
               color: $primary;
@@ -275,6 +285,7 @@
 
           .price {
             margin-right: 20px;
+            margin-bottom: 25px;
 
             &-text {
               font-size: .875rem;

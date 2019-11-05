@@ -122,6 +122,34 @@ try {
     });
 
     /**
+     * Custom dropdown
+     * @type {Element}
+     */
+    document.querySelector('.product-selected-item').classList.add('active');
+    $('.custom-dropdown-body ul li').on('click', function () {
+        let creamName = $(this).data('cream');
+        $('.custom-dropdown-input').addClass('is-selected');
+        $('.custom-dropdown-input__title').text(creamName);
+        $('input[name*="cream"]').val(creamName);
+        $('.product-selected-item').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    $('.custom-dropdown-input').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).siblings('.custom-dropdown-body').slideToggle();
+    });
+
+    if ($('.custom-dropdown-input')) {
+        $(document).on('click', e => {
+            if (!$('.custom-dropdown-input').is(e.target) && $('.custom-dropdown-input').has(e.target).length === 0) {
+                $('.custom-dropdown-input').removeClass('active');
+                $('.custom-dropdown-body').slideUp();
+            }
+        })
+    }
+
+
+    /**
      * Form-label
      */
 
@@ -151,7 +179,7 @@ try {
     /**
      * Modal
      */
-    let feedbackModal = $('.custom-modal--feedback');
+    let feedbackModal = $('.custom-modal-wrapper--feedback');
     let closeModal = $('.close-modal');
     let modalMask = $('.modal-mask');
 

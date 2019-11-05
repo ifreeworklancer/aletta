@@ -10,15 +10,14 @@
     transition: .5s;
 
     svg {
-      fill: $secondary;
-      opacity: .7;
+      fill: #fff;
       transition: .5s;
     }
 
     &:hover {
 
       svg {
-        opacity: 1;
+        fill: $primary;
       }
     }
   }
