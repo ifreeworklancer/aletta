@@ -1,5 +1,5 @@
 <!-- Reviews -->
-<section id="reviews">
+<section id="reviews" data-class-header="dark" data-class-nav="white last">
     <div class="container h-100">
         <div class="row h-100 justify-content-center justify-content-lg-start align-items-center">
             <div class="col-sm-8 col-lg-6 col-xl-5">

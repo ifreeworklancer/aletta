@@ -129,3 +129,15 @@ $reviews = [
         ],
     ],
 ];
+
+$page_laboratory = [
+    'subtitle' => 'Aletta',
+    'title' => 'Лаборатория',
+    'description' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Сonsectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li></ul>',
+    'gallery' => [
+        '../../images/content/page-laboratory/page-laboratory-item-1.jpg',
+        '../../images/content/page-laboratory/page-laboratory-item-1.jpg',
+        '../../images/content/page-laboratory/page-laboratory-item-1.jpg',
+        '../../images/content/page-laboratory/page-laboratory-item-1.jpg',
+    ],
+];

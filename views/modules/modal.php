@@ -6,8 +6,9 @@
         </div>
         <div class="custom-modal-view">
             <div class="product-selected">
-                <?php foreach ($products_list['items'] as $item) : ?>
-                    <div class="product-selected-item">
+                <?php $count = 0;
+                foreach ($products_list['items'] as $item) : $count++; ?>
+                    <div class="product-selected-item <?php if ($count === 1) echo 'active'; ?>">
                         <img src="<?= $item['image']; ?>" alt="" class="image">
                         <div class="name">
                             <?= $item['name']; ?>
@@ -25,7 +26,7 @@
                     <div class="custom-dropdown">
                         <div class="custom-dropdown-input">
                             <div class="custom-dropdown-input__title">
-                                <?= $products_list['items'][0]['name']?>
+                                <?= $products_list['items'][0]['name'] ?>
                             </div>
                             <div class="custom-dropdown-input__icon"></div>
                         </div>
@@ -37,7 +38,7 @@
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
-                            <input type="hidden" name="cream" value="<?= $products_list['items'][0]['name']?>">
+                            <input type="hidden" name="cream" value="<?= $products_list['items'][0]['name'] ?>">
                         </div>
                     </div>
                     <div class="form-group">

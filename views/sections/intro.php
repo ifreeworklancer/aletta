@@ -1,5 +1,5 @@
 <!-- Intro -->
-<section id="intro">
+<section id="intro" data-class-header="dark" data-class-nav="primary">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-sm-7 col-lg-5">

@@ -1,4 +1,5 @@
 .slider-arrow {
+  position: relative;
   display: flex;
 
   .slider-arrow-item {
@@ -20,5 +21,38 @@
         fill: $primary;
       }
     }
+  }
+}
+
+.slider-nav {
+  position: relative;
+  padding-left: 140px;
+  display: flex;
+
+  &-item {
+    color: #fff;
+    font-size: .875rem;
+    font-weight: bold;
+    user-select: none;
+
+    &--index {
+      margin-right: 3px;
+
+      &::after {
+        content: '/';
+        margin-left: 3px;
+      }
+    }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 1px;
+    background: #fff;
   }
 }

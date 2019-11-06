@@ -1,5 +1,5 @@
 <!-- Laboratory -->
-<section id="laboratory">
+<section id="laboratory" data-class-header="dark" data-class-nav="primary">
     <div class="container h-100">
         <div class="row h-100 justify-content-center justify-content-lg-start align-items-center">
             <div class="col-sm-10 col-lg-6">

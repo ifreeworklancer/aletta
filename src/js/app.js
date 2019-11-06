@@ -30,14 +30,6 @@ try {
         menu.toggleClass('active');
     });
 
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 0) {
-            $('#app-header').addClass('is-scroll');
-        } else {
-            $('#app-header').removeClass('is-scroll');
-        }
-    });
-
     /**
      * Scroll
      */
@@ -60,7 +52,6 @@ try {
      */
     if ($(window).width() >= 1200) {
         $('#app').pagepiling({
-            menu: '#app-header',
             anchors: [],
             verticalCentered: false,
             navigation: {
@@ -71,33 +62,24 @@ try {
             sectionSelector: 'section',
 
             //events
-            onLeave: function (index, nextIndex, direction) {
-            },
             afterLoad: function (anchorLink, index) {
                 let ppNav = $('#pp-nav');
                 let laboratoryImage = $('.laboratory-image');
+                let allClassHeader = 'white dark';
+                let allClassNav = 'white dark primary last';
+                let classHeader = $('.pp-section.active').data('classHeader');
+                let classNav = $('.pp-section.active').data('classNav');
 
-                if (index === 1) {
-                    header.removeClass('white').addClass('dark');
-                    ppNav.removeClass('dark white last').addClass('primary');
-                }
+
+                burgerMenu.removeClass('active');
+                headerMenu.removeClass('active');
+
+                header.removeClass(allClassHeader).addClass(classHeader);
+                ppNav.removeClass(allClassNav).addClass(classNav);
+
                 if (index === 2) {
-                    header.removeClass('white').addClass('dark');
-                    ppNav.removeClass('dark white last').addClass('primary');
                     laboratoryImage.addClass('start-animation');
-
                 }
-                if (index === 3) {
-                    header.removeClass('dark').addClass('white');
-                    ppNav.removeClass('primary white last').addClass('dark');
-                }
-                if (index === 4) {
-                    header.removeClass('white').addClass('dark');
-                    ppNav.removeClass('dark primary').addClass('white');
-                    ppNav.removeClass('dark primary').addClass('white last');
-                }
-            },
-            afterRender: function () {
             },
         });
     }
@@ -105,7 +87,6 @@ try {
     /**
      * Products accordion
      */
-    document.querySelector('.products-item').classList.add('active');
     $('.products-item').on('click', function () {
         $('.products-item').removeClass('active');
         $(this).addClass('active');
@@ -125,7 +106,6 @@ try {
      * Custom dropdown
      * @type {Element}
      */
-    document.querySelector('.product-selected-item').classList.add('active');
     $('.custom-dropdown-body ul li').on('click', function () {
         let creamName = $(this).data('cream');
         $('.custom-dropdown-input').addClass('is-selected');
@@ -261,6 +241,41 @@ try {
 
             nextArrowIntro.addEventListener('click', function () {
                 flkty1.next(false, false);
+            });
+        }
+    }
+
+    if ($('.page-laboratory-slider').length) {
+
+        let elem2 = document.querySelector('.page-laboratory-slider');
+        if (elem2) {
+            const flkty2 = new Flickity(elem2, {
+                prevNextButtons: false,
+                pageDots: false,
+                contain: true,
+                draggable: false,
+                wrapAround: false,
+                cellAlign: 'left',
+                adaptiveHeight: true,
+                on: {
+                    change: function( index ) {
+                        $('.slider-nav--laboratory .slider-nav-item--index').text(('0' + (index + 1)).slice(-2));
+                    }
+                }
+            });
+
+            $('.slider-nav--laboratory .slider-nav-item--last').text(('0' + flkty2.getCellElements().length).slice(-2));
+
+            let prevArrowIntro = document.querySelector('.slider-arrow--laboratory .slider-arrow-item--prev');
+
+            prevArrowIntro.addEventListener('click', function () {
+                flkty2.previous(false, false);
+            });
+
+            let nextArrowIntro = document.querySelector('.slider-arrow--laboratory .slider-arrow-item--next');
+
+            nextArrowIntro.addEventListener('click', function () {
+                flkty2.next(false, false);
             });
         }
     }

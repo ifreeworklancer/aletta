@@ -13,7 +13,7 @@
 
 <body>
 
-<?php require_once(__DIR__ . '/../../partials/svgs.php');?>
+<?php require_once(__DIR__ . '/../../partials/svgs.php'); ?>
 
 <!-- App-header -->
 <header id="app-header">
@@ -60,6 +60,18 @@
                         <div class="line line--top"></div>
                         <div class="line line--bottom"></div>
                     </div>
+                    <ul class="languages-menu">
+                        <li class="active">
+                            <span>
+                                ru
+                            </span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ua
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>

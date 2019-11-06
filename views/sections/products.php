@@ -1,9 +1,9 @@
 <!-- Products -->
-<section id="products">
+<section id="products" data-class-header="white" data-class-nav="dark">
     <div class="products">
-        <?php $count;
+        <?php $count = 0;
         foreach ($products['items'] as $item) : $count++; ?>
-            <div class="products-item">
+            <div class="products-item <?php if ($count === 1) echo 'active'; ?>">
                 <div class="products-item-nav">
                     <div class="title">
                         <span>
