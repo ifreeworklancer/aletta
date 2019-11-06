@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 200;
-  border-bottom: 1px solid rgba(#fff,.5);
+  border-bottom: 1px solid rgba(#fff, .5);
   padding: 10px 20px;
   background: $primary_light;
 
@@ -146,9 +146,9 @@
         line-height: 1;
         transition: .5s;
       }
-      
+
       &.active {
-        
+
         span {
           color: $primary_light;
           background: $secondary;
@@ -171,7 +171,7 @@
 
       &-list {
         li {
-          a{
+          a {
             color: #fff;
 
             &::before {
@@ -189,12 +189,42 @@
         &::before {
           background: #fff;
         }
+
+        &:hover {
+          background: #E7E7E7;
+        }
       }
 
       .burger-menu {
 
         .line {
           background: #fff;
+        }
+      }
+
+      .languages-menu {
+
+        li {
+
+          span, a {
+            color: #fff;
+          }
+
+          &.active {
+
+            span {
+              color: $secondary;
+              background: #fff;
+            }
+          }
+
+          &:hover {
+
+            a {
+              color: $secondary;
+              background: #fff;
+            }
+          }
         }
       }
     }

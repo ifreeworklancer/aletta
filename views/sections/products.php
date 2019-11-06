@@ -3,7 +3,7 @@
     <div class="products">
         <?php $count = 0;
         foreach ($products['items'] as $item) : $count++; ?>
-            <div class="products-item <?php if ($count === 1) echo 'active'; ?>">
+            <div class="products-item <?php if ($count === 1) echo 'active'; ?>" style="z-index: <?= $count;?>">
                 <div class="products-item-nav">
                     <div class="title">
                         <span>
