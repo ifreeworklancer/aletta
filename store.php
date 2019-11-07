@@ -141,3 +141,26 @@ $page_laboratory = [
         '../../images/content/page-laboratory/page-laboratory-item-1.jpg',
     ],
 ];
+
+$single_product = [
+    'description' => [
+        'title' => 'Название крема 1',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+        'feature' => [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Сonsectetur adipiscing elit.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        ],
+        'price' => '299',
+        'images' => [
+            '../../images/content/products/products-item-1.png',
+            '../../images/content/products/products-item-1.png',
+            '../../images/content/products/products-item-1.png',
+        ]
+    ],
+    'overview' => [
+        'title' => 'Обзор товара',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.',
+        'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
+    ],
+];

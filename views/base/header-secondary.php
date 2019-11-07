@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="../../dist/app.css">
 </head>
 
-<body>
+<body class="first-dark">
 
 <?php require_once(__DIR__ . '/../../partials/svgs.php'); ?>
 
 <!-- App-header -->
-<header id="app-header">
+<header id="app-header" class="white">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-auto">

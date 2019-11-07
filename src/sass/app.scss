@@ -17,6 +17,7 @@
 @import "modules/pagepiling";
 @import "modules/tabs";
 @import "modules/dropdown";
+@import "modules/video";
 
 @import "layout/header";
 @import "layout/intro";
@@ -24,5 +25,7 @@
 @import "layout/products";
 @import "layout/reviews";
 @import "layout/footer";
+
+@import "single/single-product";
 
 @import "page/page-laboratory";

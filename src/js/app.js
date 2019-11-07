@@ -65,6 +65,7 @@ try {
             afterLoad: function (anchorLink, index) {
                 let ppNav = $('#pp-nav');
                 let laboratoryImage = $('.laboratory-image');
+                let productOverviewImage = $('.product-overview-decor-image');
                 let allClassHeader = 'white dark';
                 let allClassNav = 'white dark primary last';
                 let classHeader = $('.pp-section.active').data('classHeader');
@@ -79,6 +80,7 @@ try {
 
                 if (index === 2) {
                     laboratoryImage.addClass('start-animation');
+                    productOverviewImage.addClass('start-animation');
                 }
             },
         });
@@ -192,8 +194,6 @@ try {
             html = '<iframe style="width: ' + width + 'px; height: ' + height + 'px;" ' +
                 'src="' +
                 id + '" frameborder="0" gesture="media" allowfullscreen></iframe>';
-        console.log(height);
-
         $('body').append('<div class="outer">' + html + '</div>');
     });
 
