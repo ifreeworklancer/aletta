@@ -78,6 +78,88 @@
   }
 }
 
+#product-feature {
+  background: $primary_light;
+  padding: 100px 0;
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 0;
+  }
+
+
+  .product-feature-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: 5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      background: url('../../images/content/products/products-feature-item-decor.png') 50% 50% /cover no-repeat;
+      z-index: 3;
+    }
+
+    figure {
+      @extend %img;
+      @extend %pos;
+    }
+  }
+
+  .product-feature-item {
+    position: relative;
+    z-index: 10;
+
+    &-body {
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .description {
+
+        p {
+          margin-bottom: 10px;
+
+          &:last-of-type {
+            margin-bottom: 25px;
+          }
+        }
+      }
+
+      .advantages {
+
+        &-item {
+
+          &-description {
+            p {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+
+    &-footer {
+      border-top: 2px solid #E2D1AB;
+      padding-top: 25px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+
 #product-overview {
   padding: 100px 0;
 

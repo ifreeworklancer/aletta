@@ -158,6 +158,29 @@ $single_product = [
             '../../images/content/products/products-item-1.png',
         ]
     ],
+    'feature' => [
+        'title' => 'Характеристики продукта',
+        'description' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p>',
+        'advantages' => [
+            [
+                'icon' => '../../images/content/products/products-icon-1.png',
+                'description' => 'Преимущества dolor amet, consectetur adipiscing elit.',
+            ],
+            [
+                'icon' => '../../images/content/products/products-icon-1.png',
+                'description' => 'Преимущества dolor amet, consectetur adipiscing elit.',
+            ],
+            [
+                'icon' => '../../images/content/products/products-icon-1.png',
+                'description' => 'Преимущества dolor amet, consectetur adipiscing elit.',
+            ],
+            [
+                'icon' => '../../images/content/products/products-icon-1.png',
+                'description' => 'Преимущества dolor amet, consectetur adipiscing elit.',
+            ],
+        ],
+        'image' => '../../images/content/products/products-feature-item.jpg',
+    ],
     'overview' => [
         'title' => 'Обзор товара',
         'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.',

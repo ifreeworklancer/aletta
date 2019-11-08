@@ -71,7 +71,6 @@ try {
                 let classHeader = $('.pp-section.active').data('classHeader');
                 let classNav = $('.pp-section.active').data('classNav');
 
-
                 burgerMenu.removeClass('active');
                 headerMenu.removeClass('active');
 
@@ -80,6 +79,9 @@ try {
 
                 if (index === 2) {
                     laboratoryImage.addClass('start-animation');
+                }
+
+                if (index === 3) {
                     productOverviewImage.addClass('start-animation');
                 }
             },
@@ -258,7 +260,7 @@ try {
                 cellAlign: 'left',
                 adaptiveHeight: true,
                 on: {
-                    change: function( index ) {
+                    change: function (index) {
                         $('.slider-nav--laboratory .slider-nav-item--index').text(('0' + (index + 1)).slice(-2));
                     }
                 }
