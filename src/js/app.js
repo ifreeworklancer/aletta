@@ -10,6 +10,8 @@ try {
     console.error(e);
 }
 
+let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+
 (function () {
     let header = $('#app-header');
     let menu = $('.menu');
@@ -164,6 +166,7 @@ try {
      * Modal
      */
     let feedbackModal = $('.custom-modal-wrapper--feedback');
+    let adviceModal = $('.custom-modal-wrapper--advice');
     let closeModal = $('.close-modal');
     let modalMask = $('.modal-mask');
 
@@ -173,12 +176,20 @@ try {
         $(modalMask).addClass('active');
     });
 
+    $('.open-advice').on('click', function (e) {
+        e.preventDefault();
+        $(adviceModal).addClass('active');
+        $(modalMask).addClass('active');
+    });
+
     $(closeModal).on('click', function () {
+        $(adviceModal).removeClass('active');
         $(feedbackModal).removeClass('active');
         $(modalMask).removeClass('active');
     });
 
     $(modalMask).on('click', function () {
+        $(adviceModal).removeClass('active');
         $(feedbackModal).removeClass('active');
         $(modalMask).removeClass('active');
     });
@@ -291,4 +302,51 @@ try {
         distance: '200px',
         interval: 80
     });
+
+    /**
+     * Map
+     */
+    if ($('#contacts-map').length > 0) {
+        $('.map-mask').on('click', function () {
+            $(this).addClass('is-disabled');
+        });
+        let mapLon = $('#contacts-map').data('lon');
+        let mapLat = $('#contacts-map').data('lat');
+        let mapIcon = $('#contacts-map').data('icon');
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
+        let map = new mapboxgl.Map({
+            container: 'contacts-map',
+            style: 'mapbox://styles/mapbox/light-v9',
+            center: [mapLon, mapLat],
+            zoom: 16
+        });
+
+        map.on('load', function () {
+            map.loadImage(`${mapIcon}`, function (error, image) {
+                if (error) throw error;
+                map.addImage('cat', image);
+                map.addLayer({
+                    "id": "points",
+                    "type": "symbol",
+                    "source": {
+                        "type": "geojson",
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [{
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [mapLon, mapLat],
+                                }
+                            }]
+                        }
+                    },
+                    "layout": {
+                        "icon-image": "cat",
+                        "icon-size": 1
+                    }
+                });
+            });
+        });
+    }
 })(jQuery);

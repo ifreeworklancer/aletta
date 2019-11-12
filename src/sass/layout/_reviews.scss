@@ -14,19 +14,6 @@
     padding: 0;
   }
 
-  #app-footer {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @media (min-width: map_get($grid-breakpoints, lg)) {
-      padding-left: 50px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-  }
-
   .section-description {
     margin-bottom: 40px;
   }

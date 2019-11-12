@@ -1,6 +1,13 @@
 <?php
 $app_title = 'Aletta';
-
+$phone1 = '+380123456789';
+$phone2 = '+380123456789';
+$email = 'facecream@gmail.com';
+$facebook = 'http://facebook.com';
+$instagram = 'http://instagram.com';
+$mapLat = '50.462175';
+$mapLon = '30.485481';
+$mapIcon = '../../images/icon/map-icon.png';
 
 $products_list = [
     'items' => [
@@ -186,4 +193,9 @@ $single_product = [
         'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.',
         'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
     ],
+];
+
+$page_contacts = [
+    'title' => 'Контакты',
+    'description' => 'Если у вас возникили вопросы, нужна консультация с менеджером, свяжитесь с нами по телефонам, email или заполните форму связи',
 ];

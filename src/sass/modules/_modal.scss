@@ -13,9 +13,8 @@
 
   .custom-modal {
     position: relative;
-    display: flex;
     width: 95%;
-    max-width: 760px;
+    max-width: 400px;
     padding: 30px 25px;
     margin: auto;
     border-radius: 15px;
@@ -44,12 +43,7 @@
     }
 
     &-view {
-      width: 50%;
-      display: none;
 
-      @media (min-width: map_get($grid-breakpoints, sm)) {
-        display: block;
-      }
 
       .product-selected {
         position: relative;
@@ -77,6 +71,30 @@
 
     &-body {
 
+      .title {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &--feedback {
+
+    .custom-modal {
+      max-width: 760px;
+      display: flex;
+    }
+
+    .custom-modal-view {
+      width: 50%;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        display: block;
+      }
+    }
+
+    .custom-modal-body {
+
       @media (min-width: map_get($grid-breakpoints, sm)) {
         width: 50%;
       }
@@ -86,6 +104,7 @@
       }
     }
   }
+
 
   &.active {
     opacity: 1;

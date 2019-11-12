@@ -8,6 +8,7 @@
     <title>
         <?= $app_title ?>
     </title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="../../dist/app.css">
 </head>
 

@@ -68,3 +68,42 @@
     </div>
     <div class="modal-mask"></div>
 </div>
+<div class="custom-modal-wrapper custom-modal-wrapper--advice">
+    <div class="custom-modal">
+        <div class="close-modal">
+            <div class="line line--left"></div>
+            <div class="line line--right"></div>
+        </div>
+        <div class="custom-modal-body">
+            <h3 class="title">
+                Свяжитесь с нами
+            </h3>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="user-name--<?= $user_name = generateRandomString(); ?>">
+                            Имя
+                        </label>
+                        <input type="text" name="name" id="user-name--<?= $user_name; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone--<?= $user_phone = generateRandomString(); ?>">
+                            Номер телефона
+                        </label>
+                        <input type="tel" name="phone" id="user-phone--<?= $user_phone; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email--<?= $user_email = generateRandomString(); ?>">
+                            Email
+                        </label>
+                        <input type="email" name="email" id="user-email--<?= $user_email; ?>" class="form-control">
+                    </div>
+                    <button class="btn btn-secondary w-100">
+                        Отправить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-mask"></div>
+</div>
