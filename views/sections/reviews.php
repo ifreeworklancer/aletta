@@ -65,17 +65,19 @@
                 <div class="reviews-slider-item">
                     <div class="reviews-item">
                         <div class="reviews-item-body">
-                            <div class="image">
-                                <figure style="background-image: url('<?= $item['image']; ?>');"></figure>
-                            </div>
-                            <div class="description">
-                                <p>
-                                    <?= $item['description']; ?>
-                                </p>
+                            <div class="video-overview"
+                                 style="background-image: url('<?= getVideoImageLinkAttribute($item['video']) ?>');"
+                                 data-youtube="<?= getVideoLinkAttribute($item['video']); ?>">
+                                <svg width="40" height="40">
+                                    <use xlink:href="#play-icon"></use>
+                                </svg>
                             </div>
                         </div>
                         <div class="reviews-item-footer">
                             <div class="name">
+                                <div class="image">
+                                    <figure style="background-image: url('<?= $item['image']; ?>');"></figure>
+                                </div>
                                 <?= $item['name']; ?>
                             </div>
                             <div class="stars">

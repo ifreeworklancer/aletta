@@ -85,6 +85,16 @@
 
       &-item {
         margin-right: 5px;
+
+        svg {
+          fill: #fff;
+        }
+
+        &:hover {
+          svg {
+            fill: $primary;
+          }
+        }
       }
     }
 

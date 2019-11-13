@@ -68,10 +68,10 @@
                             </span>
                         </div>
                         <div class="d-flex align-items-center">
-                            <a href="#" class="btn btn-outline-primary open-feedback mr-4">
+                            <a href="#" class="btn btn-outline-primary buy-selected open-feedback mr-4" data-cream-id="<?= $item['id']; ?>" data-cream="<?= $item['title']; ?>">
                                 заказать
                             </a>
-                            <a href="#" class="link-more">
+                            <a href="../../single/single-product.php" class="link-more">
                                 узнать больше
                             </a>
                         </div>

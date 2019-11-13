@@ -161,11 +161,6 @@
 }
 
 #product-overview {
-  padding: 100px 0;
-
-  @media (min-width: map_get($grid-breakpoints, xl)) {
-    padding: 0;
-  }
 
   .decor-image {
     @extend %img;
@@ -175,28 +170,5 @@
     width: 170px;
     height: 80px;
   }
-
-  .video-overview {
-
-    .product-overview-decor-image {
-      position: absolute;
-      top: -100px;
-      left: -150px;
-      width: 550px;
-      height: 550px;
-      z-index: -2;
-      @extend %img;
-      display: none;
-
-      @media (min-width: map_get($grid-breakpoints, xl)) {
-        display: block;
-      }
-
-      &.start-animation {
-        animation: move 2s 1 ease-in-out;
-      }
-    }
-  }
-
 }
 

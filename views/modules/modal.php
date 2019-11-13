@@ -8,10 +8,11 @@
             <div class="product-selected">
                 <?php $count = 0;
                 foreach ($products_list['items'] as $item) : $count++; ?>
-                    <div class="product-selected-item <?php if ($count === 1) echo 'active'; ?>">
+                    <div class="product-selected-item <?php if ($count === 1) echo 'active'; ?>"
+                         data-product-selected-id="<?= $item['id']; ?>">
                         <img src="<?= $item['image']; ?>" alt="" class="image">
                         <div class="name">
-                            <?= $item['name']; ?>
+                           Крем <?= $item['name']; ?> цена <?= $item['price']; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -12,16 +12,22 @@ $mapIcon = '../../images/icon/map-icon.png';
 $products_list = [
     'items' => [
         [
+            'id' => '60',
             'image' => '../../images/content/products/products-item-1.png',
-            'name' => 'Крем номер №1 цена 299 грн',
+            'name' => 'Название крема 1',
+            'price' => '299',
         ],
         [
+            'id' => '65',
             'image' => '../../images/content/products/products-item-1.png',
-            'name' => 'Крем номер №2 цена 200 грн',
+            'name' => 'Название крема 2',
+            'price' => '200',
         ],
         [
+            'id' => '67',
             'image' => '../../images/content/products/products-item-1.png',
-            'name' => 'Крем номер №3 цена 250 грн',
+            'name' => 'Название крема 3',
+            'price' => '399',
         ],
     ]
 ];
@@ -59,6 +65,7 @@ $laboratory = [
 $products = [
     'items' => [
         [
+            'id' => '60',
             'title' => 'Название крема 1',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
@@ -74,6 +81,7 @@ $products = [
             ]
         ],
         [
+            'id' => '65',
             'title' => 'Название крема 2',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
@@ -81,7 +89,7 @@ $products = [
                 'Сonsectetur adipiscing elit.',
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             ],
-            'price' => '299',
+            'price' => '200',
             'images' => [
                 '../../images/content/products/products-item-1.png',
                 '../../images/content/products/products-item-1.png',
@@ -89,6 +97,7 @@ $products = [
             ]
         ],
         [
+            'id' => '67',
             'title' => 'Название крема 3',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             'feature' => [
@@ -96,7 +105,7 @@ $products = [
                 'Сonsectetur adipiscing elit.',
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             ],
-            'price' => '299',
+            'price' => '399',
             'images' => [
                 '../../images/content/products/products-item-1.png',
                 '../../images/content/products/products-item-1.png',
@@ -112,25 +121,25 @@ $reviews = [
     'slider' => [
         [
             'image' => '../../images/content/reviews/reviews-item-1.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
             'name' => 'Валентина',
             'stars' => 5,
         ],
         [
             'image' => '../../images/content/reviews/reviews-item-1.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua',
+            'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
             'name' => 'Валентина',
             'stars' => 4,
         ],
         [
             'image' => '../../images/content/reviews/reviews-item-1.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
             'name' => 'Валентина',
             'stars' => -5,
         ],
         [
             'image' => '../../images/content/reviews/reviews-item-1.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
             'name' => 'Валентина',
             'stars' => 10,
         ],
@@ -151,6 +160,7 @@ $page_laboratory = [
 
 $single_product = [
     'description' => [
+        'id' => '60',
         'title' => 'Название крема 1',
         'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
         'feature' => [
@@ -198,4 +208,18 @@ $single_product = [
 $page_contacts = [
     'title' => 'Контакты',
     'description' => 'Если у вас возникили вопросы, нужна консультация с менеджером, свяжитесь с нами по телефонам, email или заполните форму связи',
+];
+
+$page_about = [
+    'description' => [
+        'image' => '../../images/content/page-about/page-about-item.jpg',
+        'title' => 'О нас',
+        'subtitle' => 'Aletta',
+        'description' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.</p>',
+    ],
+    'overview' => [
+        'title' => 'Название видео',
+        'description' => 'И зачем тут оно надо??? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  ut labore et dolore magna aliqua.',
+        'video' => 'https://www.youtube.com/watch?v=NOs62OQ564s',
+    ],
 ];

@@ -64,7 +64,8 @@ require_once('../views/base/header-secondary.php');
                                     грн
                                 </span>
                             </div>
-                            <a href="#" class="btn btn-outline-primary open-feedback ml-4">
+                            <a href="#" class="btn btn-outline-primary buy-selected open-feedback ml-4" data-cream-id="<?= $single_product['description']['id']; ?>"
+                               data-cream="<?= $single_product['description']['title']; ?>">
                                 заказать
                             </a>
                         </div>
@@ -123,7 +124,9 @@ require_once('../views/base/header-secondary.php');
                                     грн
                                 </span>
                                 </div>
-                                <a href="#" class="btn btn-secondary open-feedback">
+                                <a href="#" class="btn btn-secondary buy-selected open-feedback"
+                                   data-cream-id="<?= $single_product['description']['id']; ?>"
+                                   data-cream="<?= $single_product['description']['title']; ?>">
                                     заказать
                                 </a>
                             </div>
@@ -137,7 +140,7 @@ require_once('../views/base/header-secondary.php');
         </div>
     </section>
 
-    <section id="product-overview" data-class-header="dark" data-class-nav="primary">
+    <section id="product-overview" class="page-overview" data-class-header="dark" data-class-nav="primary">
         <div class="container h-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-sm-7 col-lg-5 order-2 order-lg-1">

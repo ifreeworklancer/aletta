@@ -11,14 +11,14 @@
     transition: .5s;
 
     svg {
-      fill: #fff;
+      fill: $secondary;
       transition: .5s;
     }
 
     &:hover {
 
       svg {
-        fill: $primary;
+        fill: #C6C6C6;
       }
     }
   }

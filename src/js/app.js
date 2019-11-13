@@ -83,7 +83,7 @@ let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
                     laboratoryImage.addClass('start-animation');
                 }
 
-                if (index === 3) {
+                if (index === 3 || index === 2) {
                     productOverviewImage.addClass('start-animation');
                 }
             },
@@ -112,6 +112,17 @@ let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
      * Custom dropdown
      * @type {Element}
      */
+
+    $('.buy-selected').on('click', function () {
+        let creamName = $(this).data('cream');
+        let creamID = $(this).data('cream-id');
+        $('.custom-dropdown-input').addClass('is-selected');
+        $('.custom-dropdown-input__title').text(creamName);
+        $('input[name*="cream"]').val(creamName);
+        $('.product-selected-item').removeClass('active').eq($(this).index());
+        $('.product-selected-item[data-product-selected-id='+creamID+']').addClass('active');
+    });
+
     $('.custom-dropdown-body ul li').on('click', function () {
         let creamName = $(this).data('cream');
         $('.custom-dropdown-input').addClass('is-selected');

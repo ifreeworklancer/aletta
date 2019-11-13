@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../../single/single-product.php">
+                            <a href="../../page/page-catalog.php">
                                 продукты
                             </a>
                         </li>
